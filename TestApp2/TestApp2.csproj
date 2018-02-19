@@ -20,4 +20,9 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="app.yaml" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="Dockerfile" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
 </Project>

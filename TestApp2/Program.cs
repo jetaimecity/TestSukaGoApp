@@ -20,6 +20,7 @@ namespace TestApp2
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+                .UseUrls("http://*:8080;http://localhost:8080;https://hostname:8080")
                 .Build();
     }
 }
