@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "Manage Events";
+    var viewModel = new EventViewModel();
+}
+<h2>@ViewData["Title"]hheeeeelllooo</h2>
+<h3>@ViewData["Message"]</h3>
+
+
+<div class="container">
+    <div class="col-md-5">
+        <div class="form-area">
+            <form role="form">
+                <br style="clear:both">
+                <h3 style="margin-bottom: 25px; text-align: center;">Add New Event</h3>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Event Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Event Date</label>
+                    <input type="date" class="form-control" id="date" name="date" placeholder="Start Date" required>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox">Multiple day event?</label>
+                </div>
+                <div class="form-group">
+                    <label>Start Time (eg. 12:00 PM)</label>
+                    <input type="time" class="form-control" id="starttime" name="start time" placeholder="Start Time" required>
+                </div>
+                <div class="form-group">
+                    <label>End Time (eg. 01:00 PM)</label>
+                    <input type="time" class="form-control" id="endtime" name="end time" placeholder="End Time" required>
+                </div>
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" class="form-control" id="location" name="location" placeholder="Location" required>
+                </div>
+                <div class="form-group">
+                    <label>Contact Person</label>
+                    <input type="text" class="form-control" id="contactname" name="contact name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label>Contact Person Number</label>
+                    <input type="tel" class="form-control" id="contactnumber" name="contact number" placeholder="+60123467890" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <label>Facebook Event Link</label>
+                    <input type="url" class="form-control" id="eventLink" name="event link" placeholder="https://facebook.com/events/..." required>
+                </div>
+                <div class="form-group">
+                    <label>Objectives</label>
+                    <textarea class="form-control" type="textarea" id="objective" placeholder="Objective of the event" maxlength="140" rows="7"></textarea>
+                    @*<span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>*@
+                </div>
+                <div class="form-group">
+                    <label>Tasks</label>
+                    <textarea class="form-control" type="textarea" id="tasks" placeholder="Tasks required of the volunteers" maxlength="140" rows="7"></textarea>
+                    @*<span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>*@
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <select class="form-control" id="sel-cat">
+                        <option value="" disabled selected>Select your option</option>
+                        <option>Animal Welfare</option>
+                        <option>Arts Culture and Heritage</option>
+                        <option>Community and Welfare</option>
+                        <option>Education</option>
+                        <option>Environment and Conservation</option>
+                        <option>Health</option>
+                        <option>Sports and Recreation</option>
+                        <option>Women's Services</option>
+                        <option>Others</option>
+                    </select>
+                </div>
+
+                <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Submit Form</button>
+            </form>
+        </div>
+    </div>
+</div>
